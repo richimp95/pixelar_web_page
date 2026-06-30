@@ -6,15 +6,15 @@ const display = Manrope({ subsets: ["latin"], variable: "--font-heading", displa
 const body = Inter({ subsets: ["latin"], variable: "--font-body", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Pixelar | Páginas web modernas para negocios en Guatemala",
+  title: "WNRGY | Páginas web modernas para negocios en Guatemala",
   description:
-    "Pixelar crea, renueva y administra páginas web profesionales para negocios en Guatemala. Planes Básico, Pro y Premium con diseño web, hosting, dominio y SEO básico.",
+    "WNRGY crea, renueva y administra páginas web profesionales para negocios en Guatemala. Planes Básico, Pro y Premium con diseño web, hosting, dominio y SEO básico.",
   keywords: [
     "páginas web Guatemala", "diseño web Guatemala", "crear página web",
-    "renovar página web", "administración web", "SEO Guatemala", "Pixelar",
+    "renovar página web", "administración web", "SEO Guatemala", "WNRGY",
   ],
   openGraph: {
-    title: "Pixelar | Páginas web modernas para negocios en Guatemala",
+    title: "WNRGY | Páginas web modernas para negocios en Guatemala",
     description:
       "Creamos, renovamos y administramos páginas web profesionales para negocios en Guatemala.",
     locale: "es_GT",

@@ -25,6 +25,11 @@ export function Reveal({
     const el = ref.current;
     if (!el) return;
 
+    // Estos setState son síncronos a propósito: medimos el layout al montar
+    // para fijar la visibilidad inicial sin flash. No pueden ir a un
+    // useState initializer (el ref aún no existe) ni diferirse a rAF (reintroduce
+    // el flash). Por eso desactivamos la regla heurística set-state-in-effect.
+    /* eslint-disable react-hooks/set-state-in-effect */
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduce || typeof IntersectionObserver === "undefined") {
       setState("shown");
@@ -41,6 +46,7 @@ export function Reveal({
 
     // Fuera de pantalla: ocultar (no se ve el cambio) y animar al entrar.
     setState("hidden");
+    /* eslint-enable react-hooks/set-state-in-effect */
     const io = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

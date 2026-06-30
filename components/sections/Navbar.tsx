@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { content } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
@@ -23,8 +24,15 @@ export function Navbar() {
       )}
     >
       <Container className="flex h-16 items-center justify-between">
-        <Link href="#inicio" className="text-xl font-display font-bold text-ink-strong">
-          {content.nav.brand}
+        <Link href="#inicio" className="flex items-center" aria-label={content.nav.brand}>
+          <Image
+            src="/logo/logo-white-transparent.svg"
+            alt={content.nav.brand}
+            width={132}
+            height={32}
+            className="h-8 w-auto"
+            priority
+          />
         </Link>
         <nav className="hidden md:flex items-center gap-8">
           {content.nav.links.map((l) => (

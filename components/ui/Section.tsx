@@ -3,18 +3,19 @@ import { Container } from "./Container";
 
 type Props = {
   id?: string;
-  tone?: "dark" | "light";
+  /** "base" = fondo navy; "raised" = banda navy elevada (da ritmo sin invertir el tema). */
+  tone?: "base" | "raised";
   className?: string;
   children: React.ReactNode;
 };
 
-export function Section({ id, tone = "dark", className, children }: Props) {
+export function Section({ id, tone = "base", className, children }: Props) {
   return (
     <section
       id={id}
       className={cn(
-        "py-20 sm:py-28",
-        tone === "light" ? "bg-surface-light text-ink-dark" : "bg-bg text-ink",
+        "py-20 text-ink sm:py-28",
+        tone === "raised" ? "bg-surface/25 border-y border-white/[0.06]" : "bg-bg",
         className
       )}
     >
