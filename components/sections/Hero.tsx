@@ -12,7 +12,7 @@ export function Hero() {
         <Logo
           orientation="vertical"
           markClassName="h-16 w-auto sm:h-20"
-          textClassName="text-3xl text-ink-strong sm:text-4xl"
+          textClassName="text-3xl text-accent sm:text-4xl"
         />
       }
       badge="Startups y PYMEs · Guatemala"

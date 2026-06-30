@@ -25,7 +25,7 @@ export function Navbar() {
     >
       <Container className="flex h-16 items-center justify-between">
         <Link href="#inicio" className="flex items-center" aria-label={content.nav.brand}>
-          <Logo markClassName="h-7 w-auto sm:h-8" textClassName="text-xl text-ink-strong sm:text-2xl" />
+          <Logo markClassName="h-7 w-auto sm:h-8" textClassName="text-xl text-accent sm:text-2xl" />
         </Link>
         <nav className="hidden md:flex items-center gap-8">
           {content.nav.links.map((l) => (

@@ -200,8 +200,8 @@ export const content = {
       { label: "Contacto", href: "#contacto" },
     ],
     contacto: {
-      telefono: "+502 4220-1062",
-      whatsapp: "+502 4220-1062",
+      telefono: "+502 4220-1061",
+      whatsapp: "+502 4220-1061",
       correo: "wnrgy.gt@gmail.com",
       ubicacion: "Guatemala",
     },
