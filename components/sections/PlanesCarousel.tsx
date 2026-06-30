@@ -57,15 +57,29 @@ export function PlanesCarousel({ items }: { items: readonly PlanItem[] }) {
     return () => io.disconnect();
   }, []);
 
+  // Centra un slide DENTRO del carrusel (scroll horizontal del contenedor),
+  // sin desplazar verticalmente la página (scrollIntoView movía toda la página).
+  const centerSlide = (i: number, smooth: boolean) => {
+    const root = scroller.current;
+    const el = slides.current[i];
+    if (!root || !el) return;
+    const left =
+      root.scrollLeft +
+      el.getBoundingClientRect().left -
+      root.getBoundingClientRect().left -
+      (root.clientWidth - el.clientWidth) / 2;
+    root.scrollTo({ left, behavior: smooth ? "smooth" : "auto" });
+  };
+
   // Al montar (móvil), centrar la recomendada para que quede seleccionada por default.
   useEffect(() => {
     if (typeof window === "undefined") return;
     if (!window.matchMedia("(max-width: 1023px)").matches) return;
-    slides.current[initial]?.scrollIntoView({ inline: "center", block: "nearest" });
+    centerSlide(initial, false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [initial]);
 
-  const goTo = (i: number) =>
-    slides.current[i]?.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+  const goTo = (i: number) => centerSlide(i, true);
 
   return (
     <div>
