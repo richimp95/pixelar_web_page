@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { content } from "@/lib/content";
+import { asset } from "@/lib/asset";
 import { Container } from "@/components/ui/Container";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { cn } from "@/lib/cn";
@@ -25,13 +25,13 @@ export function Navbar() {
     >
       <Container className="flex h-16 items-center justify-between">
         <Link href="#inicio" className="flex items-center" aria-label={content.nav.brand}>
-          <Image
-            src="/logo/logo-white-transparent.svg"
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={asset("/logo/wordmark-white-transparent.svg")}
             alt={content.nav.brand}
-            width={132}
+            width={106}
             height={32}
-            className="h-8 w-auto"
-            priority
+            className="h-7 w-auto sm:h-8"
           />
         </Link>
         <nav className="hidden md:flex items-center gap-8">

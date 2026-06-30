@@ -1,11 +1,55 @@
+import {
+  RefreshCw,
+  DatabaseBackup,
+  ShieldCheck,
+  Headset,
+  Gauge,
+  FileText,
+  TrendingUp,
+  CalendarCheck,
+  CalendarRange,
+  Wallet,
+  PackageCheck,
+  ArrowRightCircle,
+  Check,
+  Gift,
+  Sparkles,
+  Crown,
+  Rocket,
+  type LucideIcon,
+} from "lucide-react";
 import { content } from "@/lib/content";
 import { Section } from "@/components/ui/Section";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
+import { PlanCard, type PlanFeature } from "@/components/ui/PlanCard";
 import { Reveal } from "@/components/motion/Reveal";
-import { cn } from "@/lib/cn";
+
+function iconFor(name: string): LucideIcon {
+  const n = name.toLowerCase();
+  if (n.includes("actualiz")) return RefreshCw;
+  if (n.includes("backup")) return DatabaseBackup;
+  if (n.includes("firewall") || n.includes("caída") || n.includes("segur")) return ShieldCheck;
+  if (n.includes("soporte")) return Headset;
+  if (n.includes("velocidad") || n.includes("optimiz")) return Gauge;
+  if (n.includes("reporte")) return FileText;
+  if (n.includes("seo") || n.includes("analít")) return TrendingUp;
+  if (n.includes("revisi")) return CalendarCheck;
+  if (n.includes("sprint")) return CalendarRange;
+  if (n.includes("pago")) return Wallet;
+  if (n.includes("entrega")) return PackageCheck;
+  if (n.includes("mantenim") || n.includes("pase")) return ArrowRightCircle;
+  return Check;
+}
+
+function withIcons(features: ReadonlyArray<{ name: string; detail: string }>): PlanFeature[] {
+  return features.map((f) => ({ icon: iconFor(f.name), name: f.name, detail: f.detail }));
+}
+
+const badgeIcons: LucideIcon[] = [ShieldCheck, Sparkles, Crown];
 
 export function Planes() {
   const p = content.planes;
+  const s = p.startSprint;
   return (
     <Section id="planes">
       <Reveal>
@@ -15,64 +59,82 @@ export function Planes() {
         <p className="mt-4 max-w-[65ch] text-lg text-ink/80">{p.subtitle}</p>
       </Reveal>
 
-      <div className="mt-12 grid gap-6 lg:grid-cols-3 lg:items-start">
+      {/* Promo anual */}
+      <Reveal delay={0.1}>
+        <div className="mt-8 flex flex-col items-center gap-4 rounded-2xl bg-gradient-to-r from-accent/15 to-accent-2/10 p-5 ring-1 ring-accent/25 sm:flex-row sm:p-6">
+          <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent/15 text-accent ring-1 ring-accent/30">
+            <Gift className="h-6 w-6" aria-hidden />
+          </span>
+          <div>
+            <p className="font-display text-lg font-semibold text-ink-strong">{p.promo.title}</p>
+            <p className="mt-1 text-sm text-ink/80">{p.promo.text}</p>
+          </div>
+        </div>
+      </Reveal>
+
+      {/* Planes de mantenimiento */}
+      <div className="mt-12 grid gap-8 lg:grid-cols-3 lg:items-start">
         {p.items.map((plan, i) => (
           <Reveal key={plan.name} delay={i * 0.06}>
-            <div
-              className={cn(
-                "relative flex h-full flex-col rounded-2xl p-7 ring-1 transition-transform duration-200 ease-out hover:-translate-y-1",
-                plan.highlighted
-                  ? "bg-surface ring-accent shadow-2xl shadow-accent/20 lg:scale-[1.03]"
-                  : "bg-white/[0.03] ring-white/10"
-              )}
-            >
-              {plan.highlighted ? (
-                <span className="absolute -top-3 left-7 rounded-full bg-accent px-3 py-1 text-xs font-semibold text-ink-dark">
-                  {plan.tag}
-                </span>
-              ) : (
-                <span className="text-xs font-semibold uppercase tracking-wide text-accent">{plan.tag}</span>
-              )}
-              <h3 className="mt-2 font-display text-2xl font-bold text-ink-strong">{plan.name}</h3>
-              <p className="mt-1 text-sm font-medium text-accent">Cotización personalizada</p>
-              <p className="mt-3 text-sm text-ink/80">{plan.desc}</p>
-
-              <ul className="mt-6 space-y-2 text-sm text-ink/90">
-                {plan.includes.map((f) => (
-                  <li key={f} className="flex gap-2">
-                    <span aria-hidden className="text-accent">✓</span>
-                    <span>{f}</span>
-                  </li>
-                ))}
-                {"notIncludes" in plan &&
-                  plan.notIncludes?.map((f) => (
-                    <li key={f} className="flex gap-2 text-muted line-through">
-                      <span aria-hidden>✕</span>
-                      <span>{f}</span>
-                    </li>
-                  ))}
-              </ul>
-
-              <div className="mt-7 pt-2">
+            <PlanCard
+              badge={plan.badge}
+              badgeIcon={badgeIcons[i % badgeIcons.length]}
+              title={plan.name}
+              subtitle={plan.audience}
+              amount={plan.price}
+              period={plan.period}
+              features={withIcons(plan.features)}
+              note={plan.note}
+              highlighted={plan.highlighted}
+              className={plan.highlighted ? "lg:scale-[1.03]" : undefined}
+              cta={
                 <WhatsAppButton
                   variant={plan.highlighted ? "primary" : "secondary"}
-                  message={`Hola WNRGY, me interesa el Plan ${plan.name}. Me gustaría recibir más información.`}
+                  message={`Hola WNRGY, me interesa el Plan ${plan.name} (${plan.price}/mes). Me gustaría más información.`}
                   className="w-full"
                 >
                   {plan.cta}
                 </WhatsAppButton>
-              </div>
-            </div>
+              }
+            />
           </Reveal>
         ))}
       </div>
 
       <Reveal>
-        <div className="mt-12 flex flex-col items-center gap-4 text-center">
-          <p className="max-w-[55ch] text-ink/80">{p.helpText}</p>
-          <WhatsAppButton message="Hola WNRGY, no estoy seguro de qué plan elegir. ¿Me pueden asesorar?">
-            {p.helpCta}
-          </WhatsAppButton>
+        <p className="mx-auto mt-8 max-w-[70ch] text-center text-sm text-muted">{p.extraNote}</p>
+      </Reveal>
+
+      {/* Start Your Page */}
+      <Reveal>
+        <div className="mt-20 text-center">
+          <h3 className="font-display text-2xl font-bold text-ink-strong sm:text-3xl">¿Aún no tienes página web?</h3>
+          <p className="mx-auto mt-3 max-w-[60ch] text-ink/80">
+            La construimos por fases con sprints ágiles y pagos cómodos por etapa terminada.
+          </p>
+        </div>
+      </Reveal>
+      <Reveal delay={0.06}>
+        <div className="mt-10">
+          <PlanCard
+            badge={s.badge}
+            badgeIcon={Rocket}
+            title={s.name}
+            subtitle={s.audience}
+            amount={s.price}
+            period={s.period}
+            features={withIcons(s.features)}
+            note={s.note}
+            className="max-w-xl"
+            cta={
+              <WhatsAppButton
+                message={`Hola WNRGY, quiero desarrollar mi página desde cero con el plan ${s.name}. ¿Cómo empezamos?`}
+                className="w-full"
+              >
+                {s.cta}
+              </WhatsAppButton>
+            }
+          />
         </div>
       </Reveal>
     </Section>
