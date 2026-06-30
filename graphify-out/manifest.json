@@ -1,0 +1,237 @@
+{
+  "/home/richi/projects/pixelar_web_page/.claude/settings.local.json": {
+    "mtime": 1782759679.4248946,
+    "ast_hash": "53cba8c46a5b7be2183ec08265231ec0",
+    "semantic_hash": "53cba8c46a5b7be2183ec08265231ec0"
+  },
+  "/home/richi/projects/pixelar_web_page/app/layout.tsx": {
+    "mtime": 1782761269.7364953,
+    "ast_hash": "ea7845e31bff173f4cb7eaf211940b47",
+    "semantic_hash": "ea7845e31bff173f4cb7eaf211940b47"
+  },
+  "/home/richi/projects/pixelar_web_page/app/page.tsx": {
+    "mtime": 1782761611.028398,
+    "ast_hash": "6a001f691394d0a5587c5318161c948c",
+    "semantic_hash": "6a001f691394d0a5587c5318161c948c"
+  },
+  "/home/richi/projects/pixelar_web_page/components/motion/Reveal.tsx": {
+    "mtime": 1782761976.1003027,
+    "ast_hash": "e112dc108bb8072db258fc80c6d1f711",
+    "semantic_hash": "e112dc108bb8072db258fc80c6d1f711"
+  },
+  "/home/richi/projects/pixelar_web_page/components/sections/Beneficios.tsx": {
+    "mtime": 1782761574.9204056,
+    "ast_hash": "6cea2e367ea5f7084d77e2d47a890a9f",
+    "semantic_hash": "6cea2e367ea5f7084d77e2d47a890a9f"
+  },
+  "/home/richi/projects/pixelar_web_page/components/sections/CTAFinal.tsx": {
+    "mtime": 1782761597.2524004,
+    "ast_hash": "bbe87bc9d1e944786f0a4775bee7873b",
+    "semantic_hash": "bbe87bc9d1e944786f0a4775bee7873b"
+  },
+  "/home/richi/projects/pixelar_web_page/components/sections/FAQ.tsx": {
+    "mtime": 1782761589.0564022,
+    "ast_hash": "c4ab344d5919b972a69f167ac8117e18",
+    "semantic_hash": "c4ab344d5919b972a69f167ac8117e18"
+  },
+  "/home/richi/projects/pixelar_web_page/components/sections/Footer.tsx": {
+    "mtime": 1782761604.292399,
+    "ast_hash": "791453cd11fadc9ee00b796c43a31741",
+    "semantic_hash": "791453cd11fadc9ee00b796c43a31741"
+  },
+  "/home/richi/projects/pixelar_web_page/components/sections/Hero.tsx": {
+    "mtime": 1782761522.4564228,
+    "ast_hash": "0dd6819a0330e7f703e53ad790fb5b3c",
+    "semantic_hash": "0dd6819a0330e7f703e53ad790fb5b3c"
+  },
+  "/home/richi/projects/pixelar_web_page/components/sections/Navbar.tsx": {
+    "mtime": 1782761510.4764273,
+    "ast_hash": "453d7ecf7ac49cdb2265005dd49f78fc",
+    "semantic_hash": "453d7ecf7ac49cdb2265005dd49f78fc"
+  },
+  "/home/richi/projects/pixelar_web_page/components/sections/Planes.tsx": {
+    "mtime": 1782761562.9324086,
+    "ast_hash": "c51319abe01c5adb4b6f3aad25cfc090",
+    "semantic_hash": "c51319abe01c5adb4b6f3aad25cfc090"
+  },
+  "/home/richi/projects/pixelar_web_page/components/sections/Problema.tsx": {
+    "mtime": 1782761531.424417,
+    "ast_hash": "93337ee03ba7d20b6ada783374f20ec3",
+    "semantic_hash": "93337ee03ba7d20b6ada783374f20ec3"
+  },
+  "/home/richi/projects/pixelar_web_page/components/sections/Proceso.tsx": {
+    "mtime": 1782761571.6124063,
+    "ast_hash": "07e3850be4a33e444671a6e4dac02094",
+    "semantic_hash": "07e3850be4a33e444671a6e4dac02094"
+  },
+  "/home/richi/projects/pixelar_web_page/components/sections/Renovacion.tsx": {
+    "mtime": 1782761585.4804032,
+    "ast_hash": "c46b035a5331791574ad5d718050e255",
+    "semantic_hash": "c46b035a5331791574ad5d718050e255"
+  },
+  "/home/richi/projects/pixelar_web_page/components/sections/Servicios.tsx": {
+    "mtime": 1782761549.6364121,
+    "ast_hash": "c7d4870b8f5e0be0b2d08a0f7c7fe671",
+    "semantic_hash": "c7d4870b8f5e0be0b2d08a0f7c7fe671"
+  },
+  "/home/richi/projects/pixelar_web_page/components/sections/Solucion.tsx": {
+    "mtime": 1782761535.5804157,
+    "ast_hash": "ec35c94e8ca5b30a7266142d9a9696bc",
+    "semantic_hash": "ec35c94e8ca5b30a7266142d9a9696bc"
+  },
+  "/home/richi/projects/pixelar_web_page/components/ui/Button.tsx": {
+    "mtime": 1782761287.8684814,
+    "ast_hash": "e368c6aa1b5bfa14f5260540149c04f4",
+    "semantic_hash": "e368c6aa1b5bfa14f5260540149c04f4"
+  },
+  "/home/richi/projects/pixelar_web_page/components/ui/Card.tsx": {
+    "mtime": 1782761292.2684784,
+    "ast_hash": "24a690ad8a9061e8e7e8bc26c6c4fcff",
+    "semantic_hash": "24a690ad8a9061e8e7e8bc26c6c4fcff"
+  },
+  "/home/richi/projects/pixelar_web_page/components/ui/Container.tsx": {
+    "mtime": 1782761280.8484852,
+    "ast_hash": "e3a3e7811818b600e62cd80b6ae0115b",
+    "semantic_hash": "e3a3e7811818b600e62cd80b6ae0115b"
+  },
+  "/home/richi/projects/pixelar_web_page/components/ui/Section.tsx": {
+    "mtime": 1782761283.5164838,
+    "ast_hash": "05a22b79eaa6e593b0b86e2478513ea9",
+    "semantic_hash": "05a22b79eaa6e593b0b86e2478513ea9"
+  },
+  "/home/richi/projects/pixelar_web_page/components/ui/WhatsAppButton.tsx": {
+    "mtime": 1782761290.09248,
+    "ast_hash": "2c52acbefe07ba2bc381a713e80a26eb",
+    "semantic_hash": "2c52acbefe07ba2bc381a713e80a26eb"
+  },
+  "/home/richi/projects/pixelar_web_page/components/ui/__tests__/WhatsAppButton.test.tsx": {
+    "mtime": 1782761297.7844763,
+    "ast_hash": "433340e27b682b5f0a1b31ddb2957c3c",
+    "semantic_hash": "433340e27b682b5f0a1b31ddb2957c3c"
+  },
+  "/home/richi/projects/pixelar_web_page/eslint.config.mjs": {
+    "mtime": 1782760765.6046262,
+    "ast_hash": "dfa1f5f6a7037bf39dc510f30b180002",
+    "semantic_hash": "dfa1f5f6a7037bf39dc510f30b180002"
+  },
+  "/home/richi/projects/pixelar_web_page/lib/__tests__/content.test.ts": {
+    "mtime": 1782761088.0645256,
+    "ast_hash": "926b6574217ea5a3ac29fd65d21f2b64",
+    "semantic_hash": "926b6574217ea5a3ac29fd65d21f2b64"
+  },
+  "/home/richi/projects/pixelar_web_page/lib/__tests__/whatsapp.test.ts": {
+    "mtime": 1782761018.2885609,
+    "ast_hash": "1972af12fbd129802c4f6e972a6f6f4c",
+    "semantic_hash": "1972af12fbd129802c4f6e972a6f6f4c"
+  },
+  "/home/richi/projects/pixelar_web_page/lib/cn.ts": {
+    "mtime": 1782761023.3045595,
+    "ast_hash": "eff0ded8718da01230e923d0395ec66d",
+    "semantic_hash": "eff0ded8718da01230e923d0395ec66d"
+  },
+  "/home/richi/projects/pixelar_web_page/lib/content.ts": {
+    "mtime": 1782761077.7365289,
+    "ast_hash": "482129e49539f570f7d9305f5b6d028f",
+    "semantic_hash": "482129e49539f570f7d9305f5b6d028f"
+  },
+  "/home/richi/projects/pixelar_web_page/lib/whatsapp.ts": {
+    "mtime": 1782761012.9245625,
+    "ast_hash": "e45218a8410a640fd43fe5ce7ab466bf",
+    "semantic_hash": "e45218a8410a640fd43fe5ce7ab466bf"
+  },
+  "/home/richi/projects/pixelar_web_page/next.config.ts": {
+    "mtime": 1782760765.6046262,
+    "ast_hash": "9b77af189a21a7a64e4bd7a426f64176",
+    "semantic_hash": "9b77af189a21a7a64e4bd7a426f64176"
+  },
+  "/home/richi/projects/pixelar_web_page/package.json": {
+    "mtime": 1782761785.9723675,
+    "ast_hash": "95d3562c6e92aa3124ed7665db2551b9",
+    "semantic_hash": "95d3562c6e92aa3124ed7665db2551b9"
+  },
+  "/home/richi/projects/pixelar_web_page/postcss.config.mjs": {
+    "mtime": 1782760765.6046262,
+    "ast_hash": "239f3ebf717465dc636818a1a619398d",
+    "semantic_hash": "239f3ebf717465dc636818a1a619398d"
+  },
+  "/home/richi/projects/pixelar_web_page/tsconfig.json": {
+    "mtime": 1782760765.6046262,
+    "ast_hash": "02fc19ad21338c2ab820a70136310db4",
+    "semantic_hash": "02fc19ad21338c2ab820a70136310db4"
+  },
+  "/home/richi/projects/pixelar_web_page/vitest.config.ts": {
+    "mtime": 1782760879.6445973,
+    "ast_hash": "819d353596ef0dedb87bfbea2990e36d",
+    "semantic_hash": "819d353596ef0dedb87bfbea2990e36d"
+  },
+  "/home/richi/projects/pixelar_web_page/vitest.setup.ts": {
+    "mtime": 1782760883.2645965,
+    "ast_hash": "3709e3aa95abf0544678f0f2d9b46702",
+    "semantic_hash": "3709e3aa95abf0544678f0f2d9b46702"
+  },
+  "/home/richi/projects/pixelar_web_page/AGENTS.md": {
+    "mtime": 1782760807.7686155,
+    "ast_hash": "9e09241799026ac05be315a2f0b50055",
+    "semantic_hash": "9e09241799026ac05be315a2f0b50055"
+  },
+  "/home/richi/projects/pixelar_web_page/CLAUDE.md": {
+    "mtime": 1782760807.7686155,
+    "ast_hash": "5c27369b226fcf2be8a6cfe52224e767",
+    "semantic_hash": "5c27369b226fcf2be8a6cfe52224e767"
+  },
+  "/home/richi/projects/pixelar_web_page/README.md": {
+    "mtime": 1782760765.6046262,
+    "ast_hash": "f15aaa42d5d299d091b1171097ea56ad",
+    "semantic_hash": "f15aaa42d5d299d091b1171097ea56ad"
+  },
+  "/home/richi/projects/pixelar_web_page/docs/superpowers/plans/2026-06-29-pixelar-landing.md": {
+    "mtime": 1782760560.6566696,
+    "ast_hash": "96b75663a7d0252494c927b050c440b2",
+    "semantic_hash": "96b75663a7d0252494c927b050c440b2"
+  },
+  "/home/richi/projects/pixelar_web_page/docs/superpowers/specs/2026-06-29-pixelar-landing-design.md": {
+    "mtime": 1782760275.8087466,
+    "ast_hash": "b3e58da271c8e8e87bcf71fbc096c5c6",
+    "semantic_hash": "b3e58da271c8e8e87bcf71fbc096c5c6"
+  },
+  "/home/richi/projects/pixelar_web_page/docs/superpowers/qa/desktop-full.png": {
+    "mtime": 1782778811.4720664,
+    "ast_hash": "97f564e3741984e1fb1fb0617ef1e6b8",
+    "semantic_hash": "97f564e3741984e1fb1fb0617ef1e6b8"
+  },
+  "/home/richi/projects/pixelar_web_page/docs/superpowers/qa/desktop-hero.png": {
+    "mtime": 1782778808.7680671,
+    "ast_hash": "1d5679bc872a44fbe003ce60387dd7ca",
+    "semantic_hash": "1d5679bc872a44fbe003ce60387dd7ca"
+  },
+  "/home/richi/projects/pixelar_web_page/docs/superpowers/qa/mobile-full.png": {
+    "mtime": 1782778815.6680653,
+    "ast_hash": "60e22f2772a499dd880f92e0675b256f",
+    "semantic_hash": "60e22f2772a499dd880f92e0675b256f"
+  },
+  "/home/richi/projects/pixelar_web_page/public/file.svg": {
+    "mtime": 1782760765.6046262,
+    "ast_hash": "d09f95206c3fa0bb9bd9fefabfd0ea71",
+    "semantic_hash": "d09f95206c3fa0bb9bd9fefabfd0ea71"
+  },
+  "/home/richi/projects/pixelar_web_page/public/globe.svg": {
+    "mtime": 1782760765.6046262,
+    "ast_hash": "2aaafa6a49b6563925fe440891e32717",
+    "semantic_hash": "2aaafa6a49b6563925fe440891e32717"
+  },
+  "/home/richi/projects/pixelar_web_page/public/next.svg": {
+    "mtime": 1782760765.6046262,
+    "ast_hash": "8e061864f388b47f33a1c3780831193e",
+    "semantic_hash": "8e061864f388b47f33a1c3780831193e"
+  },
+  "/home/richi/projects/pixelar_web_page/public/vercel.svg": {
+    "mtime": 1782760765.6046262,
+    "ast_hash": "c0af2f507b369b085b35ef4bbe3bcf1e",
+    "semantic_hash": "c0af2f507b369b085b35ef4bbe3bcf1e"
+  },
+  "/home/richi/projects/pixelar_web_page/public/window.svg": {
+    "mtime": 1782760765.6046262,
+    "ast_hash": "a2760511c65806022ad20adf74370ff3",
+    "semantic_hash": "a2760511c65806022ad20adf74370ff3"
+  }
+}
