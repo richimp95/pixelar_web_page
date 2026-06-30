@@ -18,7 +18,7 @@ export function Logo({
   orientation = "horizontal",
   className,
   markClassName = "h-7 w-auto",
-  textClassName = "text-xl text-ink-strong",
+  textClassName = "text-xl text-accent",
 }: Props) {
   return (
     <span

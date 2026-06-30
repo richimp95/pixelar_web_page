@@ -1,6 +1,6 @@
 "use client";
 
-import { ShieldCheck, Sparkles, Crown, Rocket, type LucideIcon } from "lucide-react";
+import { ShieldCheck, Sparkles, Crown, Rocket, Gift, type LucideIcon } from "lucide-react";
 import { iconFor } from "@/lib/planIcons";
 import { cn } from "@/lib/cn";
 
@@ -20,14 +20,16 @@ type Props = {
   highlighted?: boolean;
   selected?: boolean;
   onSelect?: () => void;
+  /** Cuando true (toggle Anual), el precio no cambia pero se muestra el regalo. */
+  isYearly?: boolean;
   className?: string;
 };
 
 /**
- * Tarjeta de plan glassmorphism. Estructura/sombras/blur/ring del template del
- * cliente, recoloreadas a la paleta de marca (cobre). Estados hover/seleccionado
- * con curva ease-out fuerte (Emil) y respeto a prefers-reduced-motion.
- * Resuelve los íconos Lucide internamente para no cruzar funciones server→client.
+ * Tarjeta de plan (look "Neuro" recoloreado a la marca navy + cobre). Card única
+ * (sin capa trasera) → simétrica y sin recorte superior. Altura completa para
+ * igualar tamaños. Estados hover/seleccionado con curva ease-out fuerte (Emil)
+ * y respeto a prefers-reduced-motion. Resuelve íconos Lucide internamente.
  */
 export function PlanCard({
   badge,
@@ -42,53 +44,64 @@ export function PlanCard({
   highlighted = false,
   selected = false,
   onSelect,
+  isYearly = false,
   className,
 }: Props) {
   const BadgeIcon: LucideIcon = badgeIcons[badgeVariant];
+  const shownPeriod = isYearly ? "/ mes · facturado anual" : period;
   return (
-    <div className={cn("relative mr-auto ml-auto w-full max-w-sm sm:max-w-md", className)}>
-      {/* Capa de profundidad detrás (simétrica para no descuadrar la tarjeta) */}
-      <div className="absolute -z-10 inset-x-3 top-5 bottom-0 rounded-3xl bg-white/5 ring-1 ring-white/10" />
+    <div
+      onClick={onSelect}
+      className={cn(
+        "relative flex h-full flex-col overflow-hidden rounded-2xl p-6 sm:p-7",
+        "bg-gradient-to-br from-surface via-[#243750] to-surface ring-1",
+        "transition-[transform,box-shadow] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)]",
+        "[@media(hover:hover)]:hover:-translate-y-1.5 active:scale-[0.99]",
+        "motion-reduce:!translate-y-0 motion-reduce:!transition-none",
+        onSelect && "cursor-pointer",
+        selected
+          ? "z-20 ring-accent shadow-[0_-13px_180px_-30px_rgba(198,134,98,0.6)]"
+          : cn(
+              "z-10",
+              highlighted ? "ring-accent/50" : "ring-white/10",
+              "focus-within:ring-accent/60 [@media(hover:hover)]:hover:ring-accent/40"
+            ),
+        className
+      )}
+    >
+      {/* Glow decorativo superior */}
+      <div className="pointer-events-none absolute -top-24 left-1/2 h-56 w-56 -translate-x-1/2 rounded-full bg-accent/10 blur-3xl" />
 
-      {/* Tarjeta principal */}
-      <div
-        onClick={onSelect}
-        className={cn(
-          "relative flex h-full flex-col overflow-hidden rounded-3xl bg-white/5 p-6 shadow-2xl backdrop-blur-xl ring-1 sm:p-8",
-          "transition-[transform,box-shadow] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)]",
-          "[@media(hover:hover)]:hover:-translate-y-1.5 active:scale-[0.99]",
-          "motion-reduce:!translate-y-0 motion-reduce:!transition-none",
-          onSelect && "cursor-pointer",
-          selected
-            ? "ring-2 ring-accent shadow-[0_22px_60px_-18px] shadow-accent/40 -translate-y-1"
-            : cn(
-                highlighted ? "ring-accent/50" : "ring-white/10",
-                "focus-within:ring-accent/60 [@media(hover:hover)]:hover:ring-accent/40"
-              )
-        )}
-      >
-        {/* Glow decorativo */}
-        <div className="pointer-events-none absolute -top-24 -left-24 h-64 w-64 rounded-full bg-accent/10 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-24 -right-24 h-64 w-64 rounded-full bg-accent-2/10 blur-3xl" />
-
-        {/* Badge */}
-        <div className="flex justify-center">
-          <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-b from-accent-2 to-accent px-4 py-1.5 text-ink-dark shadow-lg ring-1 ring-white/20">
-            <BadgeIcon className="h-4 w-4" aria-hidden />
-            <span className="text-xs font-medium">{badge}</span>
-          </div>
+      {/* Badge */}
+      <div className="relative flex">
+        <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-b from-accent-2 to-accent px-3.5 py-1.5 text-ink-dark shadow-lg ring-1 ring-white/20">
+          <BadgeIcon className="h-4 w-4" aria-hidden />
+          <span className="text-xs font-medium">{badge}</span>
         </div>
+      </div>
 
-        {/* Título */}
-        <h3 className="mt-5 text-center text-4xl font-semibold tracking-tight text-white sm:text-5xl">{title}</h3>
-        <p className="mt-1 text-center text-sm font-normal text-slate-300 sm:text-base">{subtitle}</p>
+      {/* Encabezado */}
+      <h3 className="relative mt-5 text-2xl font-semibold tracking-tight text-white sm:text-3xl">{title}</h3>
+      <p className="relative mt-1 text-sm text-slate-300">{subtitle}</p>
 
-        {/* Monto */}
-        <p className="mt-5 text-center text-5xl font-semibold tracking-tight text-white sm:text-6xl">{amount}</p>
-        <p className="mt-2 text-center text-xs font-medium text-slate-300 sm:text-sm">{period}</p>
+      {/* Precio */}
+      <div className="relative mt-5 flex items-baseline gap-1">
+        <span className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">{amount}</span>
+        <span className="text-sm text-slate-300">{shownPeriod}</span>
+      </div>
 
-        {/* Features */}
-        <div className="mt-6 space-y-3">
+      {/* Regalo anual */}
+      {isYearly ? (
+        <div className="relative mt-4 inline-flex items-center gap-2 self-start rounded-lg bg-accent/10 px-3 py-2 text-sm font-medium text-accent ring-1 ring-accent/25">
+          <Gift className="h-4 w-4" aria-hidden />
+          Landing Page gratis incluida
+        </div>
+      ) : null}
+
+      {/* Features */}
+      <div className="relative mt-6 border-t border-white/10 pt-6">
+        <p className="mb-3 text-sm font-medium text-slate-200">Incluye:</p>
+        <div className="space-y-3">
           {features.map((f) => {
             const Icon = iconFor(f.name);
             return (
@@ -107,17 +120,17 @@ export function PlanCard({
             );
           })}
         </div>
-
-        {/* CTA (no debe disparar la selección de la tarjeta) */}
-        <div className="mt-auto pt-6" onClick={(e) => e.stopPropagation()}>
-          {cta}
-        </div>
-
-        {/* Nota */}
-        {note ? (
-          <p className="mt-5 text-center text-[11px] font-normal leading-5 text-slate-400">{note}</p>
-        ) : null}
       </div>
+
+      {/* CTA (no dispara selección) */}
+      <div className="relative mt-auto pt-6" onClick={(e) => e.stopPropagation()}>
+        {cta}
+      </div>
+
+      {/* Nota */}
+      {note ? (
+        <p className="relative mt-5 text-center text-[11px] font-normal leading-5 text-slate-300">{note}</p>
+      ) : null}
     </div>
   );
 }
