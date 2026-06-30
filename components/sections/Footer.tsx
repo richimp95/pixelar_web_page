@@ -1,8 +1,10 @@
 import { content } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
+import { waLink } from "@/lib/whatsapp";
 
 export function Footer() {
   const f = content.footer;
+  const c = f.contacto;
   return (
     <footer className="border-t border-white/10 bg-bg py-14 text-ink">
       <Container className="grid gap-10 md:grid-cols-4">
@@ -21,9 +23,25 @@ export function Footer() {
         <div>
           <p className="text-sm font-semibold text-ink-strong">Contacto</p>
           <ul className="mt-3 space-y-2 text-sm text-ink/70">
-            <li>WhatsApp: {f.contacto.whatsapp}</li>
-            <li>Correo: {f.contacto.correo}</li>
-            <li>Ubicación: {f.contacto.ubicacion}</li>
+            <li>
+              Teléfono:{" "}
+              <a href={`tel:${c.telefono.replace(/[^+\d]/g, "")}`} className="hover:text-accent transition-colors">
+                {c.telefono}
+              </a>
+            </li>
+            <li>
+              WhatsApp:{" "}
+              <a href={waLink()} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                {c.whatsapp}
+              </a>
+            </li>
+            <li>
+              Correo:{" "}
+              <a href={`mailto:${c.correo}`} className="hover:text-accent transition-colors">
+                {c.correo}
+              </a>
+            </li>
+            <li>Ubicación: {c.ubicacion}</li>
           </ul>
           <ul className="mt-4 flex gap-4 text-sm">
             {f.redes.map((r) => (
