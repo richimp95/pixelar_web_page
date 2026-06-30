@@ -6,7 +6,7 @@ import { Reveal } from "@/components/motion/Reveal";
 export function Renovacion() {
   const r = content.renovacion;
   return (
-    <Section tone="dark">
+    <Section tone="raised">
       <Reveal>
         <h2 className="font-display text-3xl font-bold text-ink-strong text-balance sm:text-4xl">{r.title}</h2>
       </Reveal>
@@ -27,7 +27,7 @@ export function Renovacion() {
         </Reveal>
         <Reveal delay={0.06}>
           <div className="h-full rounded-2xl bg-white/[0.03] p-6 ring-1 ring-accent/30">
-            <h3 className="font-display text-lg font-semibold text-accent">Después con Pixelar</h3>
+            <h3 className="font-display text-lg font-semibold text-accent">Después con WNRGY</h3>
             <ul className="mt-4 space-y-2 text-ink/90">
               {r.despues.map((x) => (
                 <li key={x} className="flex gap-2"><span aria-hidden className="text-accent">✓</span>{x}</li>
@@ -39,7 +39,7 @@ export function Renovacion() {
 
       <Reveal>
         <div className="mt-10">
-          <WhatsAppButton message="Hola Pixelar, quiero renovar mi página web actual. ¿Me pueden ayudar?">
+          <WhatsAppButton message="Hola WNRGY, quiero renovar mi página web actual. ¿Me pueden ayudar?">
             {r.cta}
           </WhatsAppButton>
         </div>

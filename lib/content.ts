@@ -1,6 +1,6 @@
 export const content = {
   nav: {
-    brand: "Pixelar",
+    brand: "WNRGY",
     links: [
       { label: "Inicio", href: "#inicio" },
       { label: "Servicios", href: "#servicios" },
@@ -13,7 +13,7 @@ export const content = {
   hero: {
     title: "Páginas web modernas para negocios que quieren crecer",
     subtitle:
-      "En Pixelar creamos, renovamos y administramos páginas web profesionales para empresas en Guatemala. Si tu negocio no tiene sitio web o el que tienes ya no representa tu calidad, nosotros lo transformamos.",
+      "En WNRGY creamos, renovamos y administramos páginas web profesionales para empresas en Guatemala. Si tu negocio no tiene sitio web o el que tienes ya no representa tu calidad, nosotros lo transformamos.",
     primaryCta: "Quiero mi página web",
     secondaryCta: "Ver planes",
     microcopy: "Diseño web • Administración mensual • Dominio y hosting • SEO básico",
@@ -32,7 +32,7 @@ export const content = {
     ],
   },
   solucion: {
-    title: "En Pixelar convertimos tu presencia digital en una ventaja",
+    title: "En WNRGY convertimos tu presencia digital en una ventaja",
     text:
       "Diseñamos páginas web modernas, claras y funcionales para que tu negocio se vea profesional, genere confianza y facilite que tus clientes te contacten.",
     beneficios: [
@@ -42,7 +42,7 @@ export const content = {
     ],
   },
   servicios: {
-    title: "Servicios de Pixelar",
+    title: "Servicios de WNRGY",
     items: [
       { title: "Creación de páginas web", text: "Diseñamos páginas web desde cero para negocios que necesitan iniciar su presencia digital con una imagen profesional." },
       { title: "Renovación de páginas web", text: "Modernizamos sitios web antiguos, desordenados o poco atractivos para que representen mejor la calidad de tu empresa." },
@@ -82,7 +82,7 @@ export const content = {
       {
         name: "Pro",
         tag: "Más recomendado",
-        desc: "Para empresas que quieren una página web profesional y prefieren que Pixelar se encargue también de la administración técnica.",
+        desc: "Para empresas que quieren una página web profesional y prefieren que WNRGY se encargue también de la administración técnica.",
         includes: [
           "Todo lo del Plan Básico.",
           "Administración mensual de la página web.",
@@ -132,7 +132,7 @@ export const content = {
     ],
   },
   beneficios: {
-    title: "¿Por qué elegir Pixelar?",
+    title: "¿Por qué elegir WNRGY?",
     items: [
       { title: "Diseño moderno", text: "Tu página se verá actual, limpia y profesional." },
       { title: "Enfoque en negocios", text: "No solo diseñamos bonito; pensamos en cómo ayudarte a generar confianza y contactos." },
@@ -145,7 +145,7 @@ export const content = {
   renovacion: {
     title: "¿Ya tienes página web, pero se ve desactualizada?",
     text:
-      "Una página vieja, lenta o poco clara puede hacer que tus clientes duden de tu negocio. En Pixelar renovamos tu sitio para que transmita profesionalismo, confianza y calidad.",
+      "Una página vieja, lenta o poco clara puede hacer que tus clientes duden de tu negocio. En WNRGY renovamos tu sitio para que transmita profesionalismo, confianza y calidad.",
     antes: [
       "Diseño viejo.",
       "Difícil de navegar.",
@@ -165,26 +165,26 @@ export const content = {
   faq: {
     title: "Preguntas frecuentes",
     items: [
-      { q: "¿Pixelar solo crea páginas web desde cero?", a: "No. También renovamos páginas web existentes para mejorar su diseño, estructura, velocidad, imagen y funcionalidad." },
+      { q: "¿WNRGY solo crea páginas web desde cero?", a: "No. También renovamos páginas web existentes para mejorar su diseño, estructura, velocidad, imagen y funcionalidad." },
       { q: "¿Qué plan me conviene si solo quiero una página web?", a: "El Plan Básico es ideal si solo necesitas la creación de tu página web y no requieres administración mensual." },
       { q: "¿Qué incluye la administración web?", a: "Incluye mantenimiento básico, revisión del funcionamiento del sitio, actualizaciones menores de contenido, dominio y hosting en el Plan Pro y Premium." },
       { q: "¿El dominio y hosting están incluidos?", a: "Sí, están incluidos en los planes Pro y Premium. En el Plan Básico pueden cotizarse por separado si el cliente lo necesita." },
       { q: "¿Qué es la indexación en Google?", a: "Es el proceso de configurar y enviar tu sitio a Google para que pueda encontrarlo, analizarlo y mostrarlo en los resultados de búsqueda." },
       { q: "¿El SEO garantiza aparecer primero en Google?", a: "No se puede garantizar la primera posición en Google, pero sí podemos optimizar la estructura básica de tu sitio para mejorar su visibilidad y facilitar que Google lo indexe correctamente." },
       { q: "¿Puedo pedir cambios después de publicada la página?", a: "Sí. En los planes Pro y Premium se incluyen actualizaciones menores como parte de la administración mensual. Cambios grandes pueden cotizarse por separado." },
-      { q: "¿Trabajan solo con empresas de Guatemala?", a: "Pixelar está basado en Guatemala, pero puede trabajar con negocios de diferentes ubicaciones si el proyecto se puede manejar de forma digital." },
+      { q: "¿Trabajan solo con empresas de Guatemala?", a: "WNRGY está basado en Guatemala, pero puede trabajar con negocios de diferentes ubicaciones si el proyecto se puede manejar de forma digital." },
     ],
   },
   ctaFinal: {
     title: "Haz que tu negocio se vea tan profesional como realmente es",
     text:
-      "Tu página web puede ser la primera impresión que un cliente tenga de tu empresa. En Pixelar te ayudamos a crear una presencia digital moderna, clara y confiable.",
+      "Tu página web puede ser la primera impresión que un cliente tenga de tu empresa. En WNRGY te ayudamos a crear una presencia digital moderna, clara y confiable.",
     primaryCta: "Cotizar por WhatsApp",
     secondaryCta: "Ver planes",
     microcopy: "Cuéntanos sobre tu negocio y te ayudamos a elegir el plan ideal.",
   },
   footer: {
-    brand: "Pixelar",
+    brand: "WNRGY",
     desc: "Creamos, renovamos y administramos páginas web para negocios que quieren crecer en internet.",
     links: [
       { label: "Inicio", href: "#inicio" },
@@ -194,11 +194,11 @@ export const content = {
     ],
     contacto: {
       whatsapp: "+502 XXXX-XXXX",
-      correo: "contacto@pixelar.gt",
+      correo: "contacto@wnrgy.com",
       ubicacion: "Guatemala",
     },
     redes: ["Instagram", "Facebook", "LinkedIn"],
-    legal: "© 2026 Pixelar. Todos los derechos reservados.",
+    legal: "© 2026 WNRGY. Todos los derechos reservados.",
   },
 } as const;
 

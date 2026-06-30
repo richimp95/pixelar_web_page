@@ -7,7 +7,7 @@ import { cn } from "@/lib/cn";
 export function Planes() {
   const p = content.planes;
   return (
-    <Section id="planes" tone="dark">
+    <Section id="planes">
       <Reveal>
         <h2 className="font-display text-3xl font-bold text-ink-strong text-balance sm:text-4xl">{p.title}</h2>
       </Reveal>
@@ -34,7 +34,7 @@ export function Planes() {
                 <span className="text-xs font-semibold uppercase tracking-wide text-accent">{plan.tag}</span>
               )}
               <h3 className="mt-2 font-display text-2xl font-bold text-ink-strong">{plan.name}</h3>
-              <p className="mt-2 text-3xl font-bold text-accent">Cotizar</p>
+              <p className="mt-1 text-sm font-medium text-accent">Cotización personalizada</p>
               <p className="mt-3 text-sm text-ink/80">{plan.desc}</p>
 
               <ul className="mt-6 space-y-2 text-sm text-ink/90">
@@ -56,7 +56,7 @@ export function Planes() {
               <div className="mt-7 pt-2">
                 <WhatsAppButton
                   variant={plan.highlighted ? "primary" : "secondary"}
-                  message={`Hola Pixelar, me interesa el Plan ${plan.name}. Me gustaría recibir más información.`}
+                  message={`Hola WNRGY, me interesa el Plan ${plan.name}. Me gustaría recibir más información.`}
                   className="w-full"
                 >
                   {plan.cta}
@@ -70,7 +70,7 @@ export function Planes() {
       <Reveal>
         <div className="mt-12 flex flex-col items-center gap-4 text-center">
           <p className="max-w-[55ch] text-ink/80">{p.helpText}</p>
-          <WhatsAppButton message="Hola Pixelar, no estoy seguro de qué plan elegir. ¿Me pueden asesorar?">
+          <WhatsAppButton message="Hola WNRGY, no estoy seguro de qué plan elegir. ¿Me pueden asesorar?">
             {p.helpCta}
           </WhatsAppButton>
         </div>
