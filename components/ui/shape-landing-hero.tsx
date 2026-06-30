@@ -57,16 +57,14 @@ function ElegantShape({
 }
 
 export function HeroGeometric({
-  logoSrc,
-  logoAlt = "WNRGY",
+  logo,
   badge = "WNRGY",
   title1 = "Páginas web modernas",
   title2,
   subtitle,
   children,
 }: {
-  logoSrc?: string;
-  logoAlt?: string;
+  logo?: ReactNode;
   badge?: string;
   title1?: string;
   title2?: string;
@@ -101,10 +99,9 @@ export function HeroGeometric({
 
       <div className="relative z-10 container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center">
-          {logoSrc ? (
+          {logo ? (
             <motion.div custom={0} variants={fadeUpVariants} initial="hidden" animate="visible" className="mb-6 flex justify-center md:mb-8">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={logoSrc} alt={logoAlt} width={112} height={120} className="h-20 w-auto sm:h-24" />
+              {logo}
             </motion.div>
           ) : null}
           <motion.div custom={0} variants={fadeUpVariants} initial="hidden" animate="visible" className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.1] mb-8 md:mb-12">
