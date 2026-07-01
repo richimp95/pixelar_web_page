@@ -76,7 +76,6 @@ export function PlanesCarousel({ items }: { items: readonly PlanItem[] }) {
     if (typeof window === "undefined") return;
     if (!window.matchMedia("(max-width: 1023px)").matches) return;
     centerSlide(initial, false);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [initial]);
 
   const goTo = (i: number) => centerSlide(i, true);

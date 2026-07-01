@@ -1,4 +1,4 @@
-import { Gift } from "lucide-react";
+import { Gift, Info } from "lucide-react";
 import { content } from "@/lib/content";
 import { Section } from "@/components/ui/Section";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
@@ -40,6 +40,12 @@ export function Planes() {
 
       <Reveal>
         <p className="mx-auto mt-8 max-w-[70ch] text-center text-sm text-muted">{p.extraNote}</p>
+      </Reveal>
+      <Reveal delay={0.03}>
+        <div className="mx-auto mt-4 flex max-w-[70ch] items-start gap-3 rounded-xl bg-white/[0.03] p-4 ring-1 ring-white/10">
+          <Info className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden />
+          <p className="text-sm text-ink/70">{p.platformNote}</p>
+        </div>
       </Reveal>
 
       {/* Start Your Page */}
