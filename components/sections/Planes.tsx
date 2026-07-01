@@ -68,7 +68,7 @@ export function Planes() {
             period={s.period}
             features={s.features}
             note={s.note}
-            className="max-w-xl"
+            className="mx-auto max-w-xl"
             cta={
               <WhatsAppButton
                 message={`Hola WNRGY, quiero desarrollar mi página desde cero con el plan ${s.name}. ¿Cómo empezamos?`}
